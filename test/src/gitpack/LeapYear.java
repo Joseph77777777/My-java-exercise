@@ -7,7 +7,6 @@
 //By taking input from the user.
 
 package gitpack;
-
 import java.util.Scanner;
 
 public class LeapYear {
