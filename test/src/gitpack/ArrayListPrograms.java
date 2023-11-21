@@ -42,6 +42,20 @@ public class ArrayListPrograms {
 	return false;
 		}
 	
+	//Java Program to check if a value is present in an array or not.
+	public static void check(int arr[],int value) {
+		
+		//Function return true if given value found in array.
+		boolean test=false;
+		for(int i : arr) {
+			if(i==value) {
+				test=true;
+				break;
+			}
+		}
+		//Display the result
+		System.out.println("Is "+value + " present in the array ? : "+ test);
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -57,6 +71,13 @@ public class ArrayListPrograms {
 		else {
 			System.out.println("The two arrays are not equal");
 		}
-
+		
+		//Driver code checking if a value is present in an array or not.
+		int arr[]= {1,2,3,4,5};
+		int value=3;
+		//print the array
+		System.out.println("Array:" + Arrays.toString(arr));
+		// Function call check
+		check(arr,value);
 }
 }
