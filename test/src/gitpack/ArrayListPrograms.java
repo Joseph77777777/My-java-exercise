@@ -57,6 +57,24 @@ public class ArrayListPrograms {
 		System.out.println("Is "+value + " present in the array ? : "+ test);
 	}
 	
+	//Function to reverse an array
+	public static void reverseArray(int arr[],int start,int end) {
+		int temp;
+		while(start<end) {
+			temp=arr[start];
+			arr[start]=arr[end];
+			arr[end]=temp;
+			start++;
+			end--;
+		}
+	}
+	
+	public static void printArray(int arr[]) {
+		for(int i :arr) {
+			System.out.print(i + " ");
+		}
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -124,5 +142,22 @@ public class ArrayListPrograms {
 		for(int elementB:arrB) {
 			System.out.print(elementB + " ");
 		}
+		
+		System.out.println();
+		
+		//Driver code of reversing an array.
+		int arr5[]= {10,30,50,70};
+		System.out.print("arr5 before reverse : ");
+		//function call printArray
+		printArray(arr5);
+		//function call reverseArray
+		reverseArray(arr5,0,3);
+		
+		System.out.println();
+		
+		System.out.print("arr5 after reverse : ");
+		//function call printArray
+		printArray(arr5);
+		
 }
 }
