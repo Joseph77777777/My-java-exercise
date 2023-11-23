@@ -95,5 +95,17 @@ public class ArrayListPrograms {
 		System.out.println("Array:" + Arrays.toString(arr));
 		// Function call check
 		check(arr,value);
+		
+		//Driver code of getting the largest number in an array.
+		int arr4[]= {10,20,30,40};
+		// Initialize maximum element
+		int maximum=arr4[0];
+		// Traverse array elements
+		for(int i=1;i<arr4.length;i++) {
+			if (arr4[i]>maximum) {
+				maximum=arr4[i];
+			}
+		}
+		System.out.println("The largest number in arr4 is : " + maximum);
 }
 }
