@@ -107,5 +107,22 @@ public class ArrayListPrograms {
 			}
 		}
 		System.out.println("The largest number in arr4 is : " + maximum);
+		
+		//Driver code of copying an array into another array.
+		//Using clone() method.
+		int arrA[]= {1,2,3};
+		 // Copying elements of arrA[] to arrB[] using clone() method.
+		int arrB[]=arrA.clone();
+		
+		System.out.println("contents of arrA :");
+		for(int elementA:arrA) {
+			System.out.print(elementA + " ");
+		}
+		System.out.println();
+		
+		System.out.println("contents of arrB :");
+		for(int elementB:arrB) {
+			System.out.print(elementB + " ");
+		}
 }
 }
