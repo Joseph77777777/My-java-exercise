@@ -59,11 +59,27 @@ public class ArrayListPrograms {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+        //Driver code of how to iterate an array in java 
+		//1st method
+		int arr[]= {1,2,3,4,5};
+		//Using for loop
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+		
+		//2nd method
+		int array[]= {1,2,3};
+		//Using for each loop
+		for(int element:array) {
+			System.out.print(element + " ");
+		}
+		System.out.println();
+		
 		//Driver code of comparing two arrays equals or not
 		int arr1[]= {1,5,4,2,6,8,7,3};
 		int arr2[]= {2,4,6,1,5,8,7,3};
-		
 		// Function call areEqual
 		if (areEqual(arr1,arr2)) {
 			System.out.println("The two arrays are equal");
@@ -73,7 +89,7 @@ public class ArrayListPrograms {
 		}
 		
 		//Driver code checking if a value is present in an array or not.
-		int arr[]= {1,2,3,4,5};
+		int arr3[]= {1,2,3,4,5};
 		int value=3;
 		//print the array
 		System.out.println("Array:" + Arrays.toString(arr));
