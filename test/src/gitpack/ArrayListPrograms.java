@@ -1,7 +1,4 @@
 /*@author Joseph Nakhle 
-
-
-
 @version: 2023-03 (4.27.0)
 @since release 8/10/23 
 */
@@ -91,6 +88,20 @@ public class ArrayListPrograms {
 		}
 		return -1;
 	}
+	
+	//Merge two sorted arrays
+	public static void mergeArrays(int arr1[],int arr2[],int arr3[],int L1,int L2) {
+		int i = 0,j=0,k = 0;
+		while(i<L1) {
+			arr3[k++]=arr1[i++];
+		}
+		while(j<L2) {
+			arr3[k++]=arr2[j++];
+		}
+		Arrays.sort(arr3);
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -184,5 +195,24 @@ public class ArrayListPrograms {
 		System.out.println("Index of 50 is : " + findIndex(arr6,50));
 		// find the index of 100 using findIndex method
 		System.out.println("Index of 100 is : " +findIndex(arr6,100));
+		
+		System.out.println();
+		
+		//Driver code of merging two arrays.
+		int arr7[]={10,15,20};
+		int arr8[]= {1,2,3};
+		
+		int L1=arr7.length;
+		int L2=arr8.length;
+		
+		int arr9[]=new int[L1+L2];
+		
+		//function call mergeArrays.
+		mergeArrays(arr7,arr8,arr9,L1,L2);
+		
+		System.out.println("Array 9 after merging : ");
+		//function call printArray
+		printArray(arr9);
+		
 }
 }
