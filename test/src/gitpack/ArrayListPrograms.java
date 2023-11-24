@@ -14,7 +14,6 @@ import java.util.Arrays;
 public class ArrayListPrograms {
 
 	// Java Program to find given two array are equal or not using sorting.
-	
 	public static boolean areEqual(int arr1[],int arr2[]) {
 		int N=arr1.length;
 		int M=arr2.length;
@@ -68,11 +67,29 @@ public class ArrayListPrograms {
 			end--;
 		}
 	}
-	
+	//method to print out an array.
 	public static void printArray(int arr[]) {
 		for(int i :arr) {
 			System.out.print(i + " ");
 		}
+	}
+	
+	//function to find the index of an element.
+	public static int findIndex(int arr[],int element) {
+		//if array is null
+		if (arr==null) {
+			return -1;
+		}
+		int i=0;
+		while(i<arr.length) {
+			if(arr[i]==element) {
+				return i;
+			}
+			else {
+				i=i+1;
+			}
+		}
+		return -1;
 	}
 	
 	public static void main(String[] args) {
@@ -159,5 +176,13 @@ public class ArrayListPrograms {
 		//function call printArray
 		printArray(arr5);
 		
+		System.out.println();
+		
+		//Driver code of getting the index of an element
+		int arr6[]= {50,60,80,100};
+		// find the index of 50 using findIndex method
+		System.out.println("Index of 50 is : " + findIndex(arr6,50));
+		// find the index of 100 using findIndex method
+		System.out.println("Index of 100 is : " +findIndex(arr6,100));
 }
 }
