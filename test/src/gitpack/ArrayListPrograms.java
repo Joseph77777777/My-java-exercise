@@ -105,7 +105,26 @@ public class ArrayListPrograms {
 		public static void move(int arr[]) {
 			Arrays.sort(arr);
 		}
-	
+		
+	//count occurrence of an element
+		public static int occurrence(int arr[],int L,int x) {
+			int count=0;
+			for(int i=0;i<L;i++) {
+				if(arr[i]==x) {
+					count++;
+				}
+			}
+			return count;
+		}
+	//Cyclically rotate an array by one
+		public static void rotate(int arr[],int N) {
+			int temp=arr[N-1];
+			for(int i=1;i<N;i++) {
+				arr[N-i]=arr[N-i-1];
+			}
+			arr[0]=temp;
+		}
+		
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -226,5 +245,23 @@ public class ArrayListPrograms {
 		System.out.println("Array 10 after moving: ");
 		//function call printArray
 		printArray(arr10);
+		
+		System.out.println();
+		
+		//Driver code to find the occurrence of an integer in the array
+		int arr11[]= {1,2,1,3,4,4,5,6};
+		int L=arr11.length;
+		//function call occurrence
+		System.out.println("Number 4 occurs " + occurrence(arr11,L,4) + " times in arr11");
+		
+		System.out.println();
+		
+		//Driver code of Cyclically rotate an array by one
+		int arr12[]= {5,1,2,3,4};
+		int N=arr12.length;
+		//function call rotate
+		rotate(arr12,N);
+		System.out.println("arr12 after rotation by one : " );
+		printArray(arr12);
 }
 }
