@@ -101,7 +101,10 @@ public class ArrayListPrograms {
 		Arrays.sort(arr3);
 	}
 	
-	
+	//Moving all negative elements to one side of an array using sorted method
+		public static void move(int arr[]) {
+			Arrays.sort(arr);
+		}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -214,5 +217,14 @@ public class ArrayListPrograms {
 		//function call printArray
 		printArray(arr9);
 		
+		System.out.println();
+		
+		//Driver code of moving all negative elements to one side.
+		int arr10[]= {1,2,-1,3,-2,-4,-5};
+		//function call move
+		move(arr10);
+		System.out.println("Array 10 after moving: ");
+		//function call printArray
+		printArray(arr10);
 }
 }
