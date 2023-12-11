@@ -30,7 +30,7 @@ double d=((Math.pow(V0, 2)*Math.sin(2*angleRad(a)))/G);
 
 System.out.print("The distance travelled is : ");
 //format the output to 2 significant digits.
-System.out.printf("%,.1f",d );
+System.out.printf("%,.2f",d );
 System.out.print(" meters");
 
 	}
